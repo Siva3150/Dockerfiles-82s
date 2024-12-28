@@ -1,6 +1,7 @@
-FROM almalinux:9
+ARG version
+FROM almalinux:${version}
 ARG course="Devops with AWS" \
     duration="120hrs"
-ENV duration=$duration
+#ENV duration=$duration
 RUN echo "Course: $course, Duration: $duration"
 CMD ["sleep", "100"]

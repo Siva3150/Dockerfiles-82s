@@ -3,4 +3,4 @@ RUN dnf install nginx -y
 RUN rm -rf /usr/share/nginx/html/index.html
 #This onbuild instruction runs only when any user uses our image
 ONBUILD COPY index.html /usr/share/nginx/html/index.html
-CMD ["sleep", "100"]
+CMD ["nginx", "-g", "daemon off;"]
